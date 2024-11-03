@@ -1,0 +1,161 @@
+/* Định dạng cho form tìm kiếm */
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4CAF50; /* Màu xanh lá */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049; /* Màu khi rê chuột */
+}
+
+/* Định dạng cho các nút môn học */
+.subject-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin-top: 20px;
+}
+
+.subject-buttons button {
+    padding: 12px 20px;
+    background-color: #007bff; /* Màu xanh dương */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subject-buttons button:hover {
+    background-color: #0056b3; /* Màu khi rê chuột */
+}
+
+/* Lớp highlight cho nút tìm thấy */
+.highlight {
+    background-color: #FFD700; /* Màu vàng nổi bật */
+    color: #000;
+    font-weight: bold;
+}
+
+/* Định dạng cho nút Quay lại (Back) */
+/* Định dạng cho nút Quay lại (Back) */
+.back-button {
+    padding: 10px 20px;
+    background-color: #888888; /* Màu xám */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button:hover {
+    background-color: #666666; /* Màu xám đậm hơn khi rê chuột */
+}
+
+/* Định dạng chung cho trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Định dạng cho thông tin môn học */
+#course-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Định dạng cho danh sách giảng viên */
+#instructors {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo cột */
+    gap: 15px;
+}
+
+#instructors button {
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+#instructors button:hover {
+    background-color: #45a049;
+}
+
+
+/* Định dạng cho tài liệu học */
+#resources {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #555;
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources li {
+    margin: 10px 0;
+}
+
+#resources a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#resources a:hover {
+    text-decoration: underline;
+}
