@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triết học Mác - Lê-nin</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        /* CSS để căn giữa hình ảnh */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0; /* Thêm khoảng cách trên và dưới hình ảnh */
+        }
+        .instructor-info {
+            display: none; /* Ẩn thông tin giảng viên mặc định */
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
     <button class="back-button" onclick="history.back()">Quay lại</button>
@@ -14,15 +29,73 @@
     <!-- Thông tin môn học -->
     <section id="course-info">
         <h2>Thông tin môn học</h2>
-        <p>Môn học Triết học Mác - Lê-nin cung cấp cho sinh viên kiến thức nền tảng về các nguyên lý cơ bản của triết học Mác - Lê-nin, giúp phát triển tư duy lý luận và khả năng phân tích các vấn đề xã hội hiện đại dưới góc độ triết học.</p>
+        <p>Triết học Mác - Lênin là một môn học có vai trò quan trọng trong việc cung cấp nền tảng lý luận cho nhiều lĩnh vực khác nhau, đặc biệt là trong các ngành khoa học xã hội.  Triết học Mác - Lênin cung cấp một cái nhìn toàn diện về thế giới và vị trí của con người trong đó. Sinh viên sẽ được học về các quy luật vận động phát triển của tự nhiên, xã hội và tư duy. Môn học này giải quyết vấn đề cơ bản của triết học là mối quan hệ giữa vật chất và ý thức, giúp sinh viên hiểu rõ hơn về vai trò của thực tiễn trong nhận thức và biến đổi thế giới. Phân tích các quy luật vận động của xã hội, các giai cấp xã hội và các cuộc đấu tranh giai cấp. Sinh viên sẽ hiểu rõ hơn về quá trình phát triển của lịch sử nhân loại và vai trò của con người trong việc tạo ra lịch sử. Đồng thời, sẽ được trang bị những công cụ tư duy để phân tích, đánh giá các hiện tượng xã hội một cách khoa học.
+        </p>
     </section>
 
     <!-- Danh sách giảng viên -->
     <section id="instructors">
         <h2>Danh sách giảng viên</h2>
-        <button onclick="location.href='mailto:giaovien1@example.com'">Giảng viên 1 - Cô Nguyễn Thị A</button>
-        <button onclick="location.href='mailto:giaovien2@example.com'">Giảng viên 2 - Thầy Trần Văn B</button>
-        <button onclick="location.href='mailto:giaovien3@example.com'">Giảng viên 3 - Cô Lê Thị C</button>
+        <button onclick="toggleInfo('info1')">Giảng viên 1 - Thầy Nguyễn Thanh Bình</button>
+        <div id="info1" class="instructor-info">
+            <p><strong>Email:</strong> nguyenthanhbinhtriet@gmail.com</p>
+            <p><strong>Trình độ học vấn:</strong> PGS.TS</p>
+            <p><strong>Đơn vị công tác:</strong> Khoa Triết học</p>
+            <p><strong>Phong cách giảng dạy:</strong> Khó hiểu, nghiêm khắc và hay cợt nhả về vấn đề, cũng như dùng cợt nhả để phân biệt sinh viên tỉnh lẻ, phân biệt vùng miền. (Nhưng cũng chỉ cợt nhả chứ thầy không có ý gì hết.)</p>
+            <p><strong>Điểm số:</strong> Đôi khi cho điểm cực dễ, nhưng đôi lúc ăn điểm 0 nhanh như trở bàn tay.</p>
+            <p><strong>Điểm ưa thích:</strong> Bài giảng sắc bén, dạy không cần dùng đến slide hay máy chiếu.</p>
+            <p><strong>Không thích:</strong> Sự cợt nhả, trêu chọc sinh viên tỉnh lẻ, đọc chép quá nhanh, cho điểm quá thấp.</p>
+            <p><strong>Những lưu ý:</strong> Cố gắng làm bài tập, ghi bài đầy đủ, đừng bao giờ đi muộn quá 5 phút, đừng bao giờ cố gắng xin điểm của thầy.</p>
+        </div>
+        
+        <button onclick="toggleInfo('info2')">Giảng viên 2 - Thầy Phạm Thanh Hà</button>
+        <div id="info2" class="instructor-info">
+            <p><strong>Email:</strong> hapham@vnu.edu.vn</p>
+            <p><strong>Năm sinh:</strong> 1979</p>
+            <p><strong>Trình độ học vấn:</strong> Tiến sĩ</p>
+            <p><strong>Đơn vị công tác:</strong> Khoa Triết học</p>
+            <p><strong>Phong cách giảng dạy:</strong> Thầy khá nghiêm khắc, yêu cầu khi học cần phải nghiêm túc (đặc biệt thầy không thích các bạn mất trật tự trong giờ, ngủ trong giờ), đổi lại chăm chú nghe giảng và phát biểu thầy sẽ cộng điểm rất nhiều đó ạ. Kiến thức của thầy rất tuyệt vời, nhiều câu hỏi thú vị. Nếu ai học để mong điểm cao, dễ thì thầy không phải sự lựa chọn. Nếu ai học với tâm thế nghiêm túc sẵn sàng thu nhận kiến thức thì thầy là một giảng viên tuyệt vời.</p>
+            <p><strong>Điểm số:</strong> Điểm chuyên cần: Đi đủ thì 8đ phát biểu cộng dần sang cả giữa kì luôn. Điểm giữa kì: làm bài tập nhóm (thầy chấm khá dễ). Cuối kì: Là lúc khẳng định bản thân trong phòng máy.</p>
+            <p><strong>Điểm ưa thích:</strong> Em rất thích cách giảng bài của thầy. </p>
+            <p><strong>Không thích:</strong> Thầy nghiêm túc nên đôi khi cảm thấy sợ.</p>
+            <p><strong>Những lưu ý:</strong> Đừng nói chuyện, đừng ngủ! K là bị đuổi ra ngoài đấy 🤣</p>
+        </div>
+
+        <button onclick="toggleInfo('info3')">Giảng viên 3 - Thầy Mai K Đa</button>
+        <div id="info3" class="instructor-info">
+            <p><strong>Email:</strong> maikda@ussh.edu.vn</p>
+            <p><strong>Trình độ học vấn:</strong> Tiến sĩ</p>
+            <p><strong>Đơn vị công tác:</strong> Khoa Triết học</p>
+            <p><strong>Năm công tác:</strong> Là giảng viên tại trường từ năm 2013</p>
+            <p><strong>Phong cách giảng dạy:</strong> Thầy rất dễ tính và dạy dễ hiểu.</p>
+            <p><strong>Điểm số:</strong> Thầy chấm điểm rất dễ (tất cả lớp full 9,5), giữa kì thầy cộng 0,5 vào bài giữa kì.</p>
+            <p><strong>Điểm ưa thích:</strong> Mình thích thầy rất nhiều thứ.</p>
+            <p><strong>Không thích:</strong> Thầy cho điểm chuyên cần quá dễ gây sự bất công cho những bạn chăm chỉ.</p>
+            <p><strong>Những lưu ý:</strong> Chăm học và chăm nghe giảng là được. Thầy có lẽ là người thầy tuyệt vời nhất trong kì đầu đại học của mình và có lẽ là cả đời sinh viên. Rất may mắn khi được học thầy.</p>
+        </div>
+
+        <button onclick="toggleInfo('info4')">Giảng viên 4 - Cô Nguyễn Thu Trang</button>
+        <div id="info4" class="instructor-info">
+            <p><strong>Email:</strong> thutrang041980@gmail.com</p>
+            <p><strong>Năm sinh:</strong> 1980</p>
+            <p><strong>Trình độ học vấn:</strong> Thạc sĩ</p>
+            <p><strong>Đơn vị công tác:</strong> Khoa Việt Nam học và tiếng Việt.</p>
+            <p><strong>Phong cách giảng dạy:</strong> Cô dễ tính, thú vị, giảng dạy dễ hiểu, khá thoáng trong chấm bài, khuyến khích sự sáng tạo.</p>
+            <p><strong>Điểm số:</strong> Cô chấm điểm dễ, điểm nào cũng dễ.</p>
+            <p><strong>Điểm ưa thích:</strong> Cô hiền, cách dạy logic và dễ hiểu.</p>
+            <p><strong>Những lưu ý:</strong> Chăm làm bài tập, mang sách bài tập đầy đủ, không nghỉ học không có phép.</p>
+        </div>
+
+        <button onclick="toggleInfo('info5')">Giảng viên 5 - Cô Đặng Thị Lan</button>
+        <div id="info5" class="instructor-info">
+            <p><strong>Email:</strong> dangthilan61@gmail.com</p>
+            <p><strong>Trình độ học vấn:</strong> PGS.TS</p>
+            <p><strong>Đơn vị công tác:</strong> Khoa Triết học</p>
+            <p><strong>Phong cách giảng dạy:</strong> Cô dễ tính, theo cá nhân mình thì cô giảng lúc thú vị lúc không, nhưng cô lấy ví dụ cũng dễ hiểu, cô khuyến khích sinh viên sáng tạo.</p>
+            <p><strong>Điểm số:</strong> Chuyên cần thì cô sẽ giao cho lớp trưởng điểm danh, nghỉ 1 buổi thì trừ 0.5. Nếu đi học đủ thì đc 9. Giữa kì cô cho làm tự luận 10 câu nêu đúng/sai và giải thích ngắn gọn, lớp mình được khoảng từ 7-8.5đ.</p>
+            <p><strong>Điểm ưa thích:</strong> Cô cho điểm siêu cao.</p>
+            <p><strong>Những lưu ý:</strong> Nếu bạn xung phong thuyết trình thì điểm sẽ cao bung nóc nhà.</p>
+        </div>
     </section>
 
     <!-- Tài liệu học -->
@@ -33,5 +106,16 @@
         </ul>
     </section>
 
+    <script src="script.js"></script>
+    <script>
+        function toggleInfo(infoId) {
+            var infoDiv = document.getElementById(infoId);
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block"; // Hiện thông tin
+            } else {
+                infoDiv.style.display = "none"; // Ẩn thông tin
+            }
+        }
+    </script>
 </body>
 </html>
